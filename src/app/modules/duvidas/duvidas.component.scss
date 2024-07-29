@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+}
+
+header {
+  background: #f32623;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  border-bottom: 5px solid #e02d1b;
+}
+
+header h1 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.comentarios-container {
+  width: 90%;
+  max-width: 1500px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.comentario {
+  position: relative;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.comentario:hover {
+  background: #f0f0f0;
+  border-color: #f32623;
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+.comentario-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.comentario-autor {
+  font-weight: bold;
+  color: #f32623;
+}
+
+.comentario-date {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.comentario-body p {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.responses {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.response {
+  border-left: 4px solid #f32623;
+  padding-left: 15px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.response:hover {
+  background: #fafafa;
+  border-left-color: #c72c1d;
+}
+
+.response-author {
+  font-weight: bold;
+  color: #f32623;
+}
+
+.response-date {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.response-body p {
+  margin: 10px 0 0;
+  font-size: 1em;
+}
+
+@media (max-width: 1200px) {
+  header h1 {
+    font-size: 26px;
+  }
+
+  .comentario-body p {
+    font-size: 1em;
+  }
+
+  .comentario {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  .comentarios-container {
+    width: 95%;
+  }
+
+  .comentario-body p {
+    font-size: 0.9em;
+  }
+
+  .comentario {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  .comentarios-container {
+    padding: 15px;
+  }
+
+  .comentario-body p {
+    font-size: 0.8em;
+  }
+
+  .comentario {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 18px;
+  }
+
+  .comentarios-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .comentario-body p {
+    font-size: 0.75em;
+  }
+
+  .comentario {
+    padding: 6px;
+  }
+}

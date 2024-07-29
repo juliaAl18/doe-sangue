@@ -1,0 +1,34 @@
+#bloodStockChart {
+    width: 70%; 
+    height: 5px; 
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+  }
+
+  @media (max-width: 1200px) {
+    #bloodStockChart {
+      width: 80%; 
+    }
+  }
+  
+  @media (max-width: 992px) {
+    #bloodStockChart {
+      width: 90%; 
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #bloodStockChart {
+      width: 95%; 
+    }
+  }
+  
+  @media (max-width: 576px) {
+    #bloodStockChart {
+      width: 100%; 
+      height: 10px; 
+    }
+  }
+  

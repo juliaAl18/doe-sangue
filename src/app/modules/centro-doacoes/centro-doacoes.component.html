@@ -1,0 +1,44 @@
+<div class="container">
+    <header>
+        <div class="titulo">
+            <h1>Encontre Centros de Doação de Sangue em Brasília</h1>
+            <p>Descubra os locais próximos e entre em contato para mais informações.</p>
+        </div>
+    </header>
+    <section id="centros" class="centros">
+        <div class="centro-card" *ngFor="let center of centros">
+            <mat-card class="center-card">
+                <mat-card-header>
+                    <mat-card-title style="font-size: 20px; font-weight: 600;">{{ center.name }}</mat-card-title>
+                    <mat-card-subtitle>
+                        <a [href]="mapaUrl(center.endereco)" target="_blank" class="mapa-link">
+                            {{ center.endereco }}
+                        </a>
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <p><strong>Horário de Funcionamento:</strong> {{ center.horario }}</p>
+                    <p
+                        [ngClass]="{ 'status-open': Open(center.horario), 'status-closed': !Open(center.horario) }">
+                        {{ Open(center.horario) ? 'Aberto agora' : 'Fechado agora' }}
+                    </p>
+                    <p><strong>Telefone:</strong>
+                        <a [href]="'tel:' + center.telefone" class="telefone-link"> {{ center.telefone }}</a>
+                    </p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </section>
+    <section id="contato" class="contato">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title style="font-size: 20px; font-weight: 600;">Contato</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p><strong>Email:</strong> {{ contactInfo.email }}</p>
+                <p><strong>Telefone:</strong> {{ contactInfo.phone }}</p>
+            </mat-card-content>
+        </mat-card>
+    </section>
+</div>
+<app-roda-pe></app-roda-pe>

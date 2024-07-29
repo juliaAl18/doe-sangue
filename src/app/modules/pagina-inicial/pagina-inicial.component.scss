@@ -1,0 +1,193 @@
+.menu {
+  position: relative;
+  padding: 10px;
+  background-color: #c74343;
+  color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu img {
+  position: absolute;
+  left: 10px;
+  width: 120px;
+  height: auto;
+}
+
+.sub-menu {
+  margin: 0 10px;
+}
+
+.sub-menu a {
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.sub-menu a:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.comentarios {
+  background: linear-gradient(to bottom right, #f32623, #9c2523, #551514);
+  padding: 20px 0;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+  background: #f4f4f4;
+  flex-wrap: wrap;
+}
+
+.texto,
+.duvidas {
+  flex: 1;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+  margin: 10px;
+}
+
+.texto:hover,
+.duvidas:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.texto h1,
+.duvidas h1 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 2px solid #f32623;
+  padding-bottom: 10px;
+}
+
+.texto h2,
+.duvidas h2 {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: #9c2523;
+}
+
+.texto p,
+.duvidas p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 10px 0;
+  color: #555;
+}
+
+.grafico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.grafico h1 {
+  margin-bottom: 20px;
+}
+
+.menu-button {
+  background-color: #fff;
+  border: none;
+  color: #c74343;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.menu-button:hover {
+  background-color: #e2e2e2;
+}
+
+.imagem {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.imagem img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .menu img {
+    width: 70px;
+  }
+
+  .container {
+    gap: 15px;
+  }
+
+  .texto,
+  .duvidas {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .menu img {
+    width: 60px;
+  }
+
+  .texto,
+  .duvidas {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sub-menu {
+    margin-right: 0;
+  }
+
+  .texto,
+  .duvidas {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .menu-button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .grafico h1 {
+    font-size: 1.2rem;
+  }
+}

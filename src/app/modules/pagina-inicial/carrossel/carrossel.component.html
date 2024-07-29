@@ -1,0 +1,11 @@
+<div class="carrossel-container">
+    <div class="carrossel-wrapper" [style.transform]="transform">
+      <div *ngFor="let comment of comentarios" class="carrossel-slide">
+        <div class="carrossel-comentario">
+          <p>{{ comment.text }}</p>
+          <span class="carrossel-autor">— {{ comment.autor }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  

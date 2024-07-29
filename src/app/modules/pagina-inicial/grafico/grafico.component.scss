@@ -1,0 +1,29 @@
+.chart-container {
+    width: 90%;
+    max-width: 1000px; 
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1200px) {
+    .chart-container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 992px) {
+    .chart-container {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        width: 100%;
+        padding: 5px;
+    }
+}

@@ -1,0 +1,91 @@
+<div class="div-geral">
+    <div class="menu">
+        <img src="assets/doe-sangue.png">
+        <div class="sub-menu">
+            <a href="/mapa">Centro de Doações</a>
+        </div>
+        <div class="sub-menu">
+            <a href="/duvidas">Dúvidas</a>
+        </div>
+        <div class="sub-menu">
+            <a href="/noticias">Notícias e Atualizações</a>
+        </div>
+        <button class="menu-button" (click)="irParaDoar()">Doe Sangue</button>
+    </div>
+    <div class="imagem">
+        <img src="assets/logo.webp">
+    </div>
+    <div class="grafico">
+        <h1>Estoque de Doações de Sangue em Tempo Real</h1>
+        <app-grafico></app-grafico>
+    </div>
+    <div class="container">
+        <div class="texto">
+            <h1>Por que doar sangue?</h1>
+            <br>
+            <p>A doação de sangue é um ato de solidariedade que pode salvar vidas e trazer benefícios tanto para quem
+                doa quanto para quem recebe. Aqui estão algumas razões pelas quais a doação de sangue é tão importante:
+            </p>
+
+            <h2>1. Salva Vidas</h2>
+            <p>O sangue é essencial em situações de emergência, como acidentes e cirurgias complexas. Cada doação pode
+                ajudar a salvar até três vidas, já que o sangue doado é dividido em componentes que podem ser usados
+                para diferentes pacientes.</p>
+
+            <h2>2. Ajuda a Tratar Doenças</h2>
+            <p>Pacientes com doenças como anemia, leucemia e outras condições crônicas frequentemente precisam de
+                transfusões de sangue. A doação regular ajuda a garantir que esses pacientes recebam o tratamento
+                necessário.</p>
+
+            <h2>3. Promove a Saúde</h2>
+            <p>Doar sangue regularmente pode ter benefícios para a saúde do doador, como a redução do risco de doenças
+                cardiovasculares e a renovação das células sanguíneas.</p>
+
+            <h2>4. Contribui para a Comunidade</h2>
+            <p>Ao doar sangue, você está contribuindo diretamente para a saúde e bem-estar de sua comunidade. O estoque
+                de sangue precisa ser constantemente renovado, e a sua doação ajuda a manter essa reserva vital.</p>
+
+            <h2>5. É um Processo Simples e Seguro</h2>
+            <p>A doação de sangue é um procedimento rápido, seguro e relativamente simples. Os centros de coleta seguem
+                rigorosos protocolos de segurança para garantir a saúde e segurança tanto dos doadores quanto dos
+                receptores.</p>
+        </div>
+
+        <div class="duvidas">
+            <h1>Quem Pode Doar Sangue?</h1>
+            <br>
+            <p>A doação de sangue é um ato de solidariedade que pode salvar vidas. Para garantir a segurança do doador e
+                do receptor, existem alguns requisitos que devem ser atendidos. Aqui estão as condições para quem pode
+                doar sangue:</p>
+
+            <h2>1. Idade</h2>
+            <p>Você deve ter entre 16 e 69 anos. Se for a sua primeira doação, você deve ter pelo menos 18 anos. É
+                permitido doar sangue até os 69 anos, desde que o doador tenha feito pelo menos uma doação anterior.</p>
+
+            <h2>2. Peso</h2>
+            <p>O peso mínimo para doação de sangue é de 50 kg. Isso é importante para garantir que o doador possa
+                suportar a retirada do sangue sem riscos à saúde.</p>
+
+            <h2>3. Saúde</h2>
+            <p>Você deve estar em boas condições de saúde e não apresentar sintomas de doenças infecciosas. Algumas
+                condições médicas e uso de certos medicamentos podem desqualificar temporariamente a doação. Sempre
+                consulte um centro de doação para verificar sua elegibilidade.</p>
+
+            <h2>4. Alimentação</h2>
+            <p>É recomendado que o doador esteja bem alimentado e hidratado antes da doação. Evite alimentos gordurosos
+                e bebidas alcoólicas nas horas que antecedem a doação.</p>
+
+            <h2>5. Intervalo entre Doações</h2>
+            <p>Para homens, o intervalo mínimo entre doações de sangue é de 60 dias. Para mulheres, o intervalo é de 90
+                dias.</p>
+
+            <p>Se você se enquadra nos critérios acima e deseja saber mais sobre a doação de sangue, entre em contato
+                com um centro de doação local ou consulte um profissional de saúde.</p>
+        </div>
+    </div>
+    <div class="comentarios">
+        <app-carrossel></app-carrossel>
+    </div>
+    <app-estoque-sangue></app-estoque-sangue>
+    <app-roda-pe></app-roda-pe>
+</div>

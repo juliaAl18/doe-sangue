@@ -1,0 +1,86 @@
+/* Estilos do Carrossel */
+.carrossel-container {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carrossel-wrapper {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.carrossel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  transform: scale(1);
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.carrossel-slide:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.carrossel-comentario {
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.carrossel-autor {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+@media (max-width: 1200px) {
+  .carrossel-container {
+    width: 90%;
+  }
+
+  .carrossel-comentario {
+    font-size: 1.1rem; 
+    padding: 15px; 
+  }
+}
+
+@media (max-width: 992px) {
+  .carrossel-container {
+    width: 95%;
+  }
+
+  .carrossel-comentario {
+    font-size: 1rem; 
+    padding: 10px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .carrossel-slide {
+    transform: scale(1); 
+  }
+
+  .carrossel-comentario {
+    font-size: 0.9rem; 
+    padding: 8px; 
+  }
+}
+
+@media (max-width: 576px) {
+  .carrossel-container {
+    width: 100%;
+  }
+
+  .carrossel-comentario {
+    font-size: 0.8rem; 
+    padding: 5px; 
+  }
+}

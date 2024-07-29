@@ -13,7 +13,6 @@ import { RodaPeComponent } from './modules/roda-pe/roda-pe.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CentroDoacoesComponent } from './modules/centro-doacoes/centro-doacoes.component';
-import { GoogleMapsModule } from '@angular/google-maps';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -46,7 +45,6 @@ import { EstoqueSangueComponent } from './modules/pagina-inicial/estoque-sangue/
     HttpClientModule,
     BrowserAnimationsModule,
     MatSnackBarModule,
-    GoogleMapsModule,
     MatCardModule,
     MatButtonModule,
     MatIconModule,

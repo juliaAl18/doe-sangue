@@ -22,6 +22,8 @@ import { NoticiasComponent } from './modules/noticias/noticias.component';
 import { DuvidasComponent } from './modules/duvidas/duvidas.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { EstoqueSangueComponent } from './modules/pagina-inicial/estoque-sangue/estoque-sangue.component';
+import { FeedRssComponent } from './modules/feed-rss/feed-rss.component';
+import { CommonModule, NgClass } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { EstoqueSangueComponent } from './modules/pagina-inicial/estoque-sangue/
     NoticiasComponent,
     DuvidasComponent,
     EstoqueSangueComponent,
+    FeedRssComponent  
   ],
   imports: [
     BrowserModule,
@@ -48,10 +51,13 @@ import { EstoqueSangueComponent } from './modules/pagina-inicial/estoque-sangue/
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    MatFormFieldModule, // Adicione aqui
+    MatFormFieldModule, 
     MatInputModule,
-    DragDropModule
-  ],
+    DragDropModule,
+    NgClass,
+    MatIconModule,
+    CommonModule,
+],
   providers: [],
   bootstrap: [AppComponent]
 })

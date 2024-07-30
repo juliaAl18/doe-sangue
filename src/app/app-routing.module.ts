@@ -9,6 +9,7 @@ import { CentroDoacoesComponent } from './modules/centro-doacoes/centro-doacoes.
 import { NoticiasComponent } from './modules/noticias/noticias.component';
 import { DuvidasComponent } from './modules/duvidas/duvidas.component';
 import { EstoqueSangueComponent } from './modules/pagina-inicial/estoque-sangue/estoque-sangue.component';
+import { FeedRssComponent } from './modules/feed-rss/feed-rss.component';
 
 const routes: Routes = [
   { path: 'pagina-inicial', component: PaginaInicialComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'duvidas', component: DuvidasComponent },
   { path: 'noticias', component: NoticiasComponent },
   { path: 'estoque', component: EstoqueSangueComponent },
+  { path: 'feed-rss', component: FeedRssComponent },
 ];
 
 @NgModule({

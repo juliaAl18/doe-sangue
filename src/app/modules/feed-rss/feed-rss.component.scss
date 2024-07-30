@@ -1,0 +1,431 @@
+.container-feed {
+    background-color: #fcf6f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-feed {
+    h1 {
+        color: #a70401;
+        font-size: 44px;
+        padding: 10px 0 10px 0;
+        span {
+            font-weight: bold;
+        }
+    }
+}
+
+.card-mobile {
+    background-color: #e3e3e3;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 520px;
+    padding: 10px;
+    margin: 10px 0 50px 0;
+
+    a {
+        h2 {
+            padding: 60px 0 0 0;
+            color: #f32623;
+
+            &:hover {
+                font-weight: bold;
+            }
+        }
+    }
+
+    section {
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    
+        img {
+            border-radius: 18px;
+            width: 80%;
+            height: 60%;
+        }
+    
+        p {
+            padding: 5px;
+            text-align: left;
+            width: 80%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        a {
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 0 70px 0;
+
+            &:hover {
+                color: #7d7d7d;
+            }
+        }
+    }
+
+    &.fade-in {
+        opacity: 0;
+        animation: fadeIn 0.3s ease-in forwards;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.card-mobile-loading {
+    background-color: #FBFBFB;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 520px;
+    padding: 10px;
+    margin: 10px 0 50px 0;
+}
+
+.feed-body-mobile {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {    
+        background-color: #a70401;
+        color: #F5F5F5;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        padding: 5px;
+    }
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 5px 0 5px;
+
+    h1 {
+        font-weight: 600;
+        color: #f32623;
+        font-size: 26px;
+    }
+
+    img {
+        width: 100%;
+        height: 50px;
+    }
+}
+
+.body-feed {
+    display: none;
+}
+
+.card {
+    display: none;
+}
+
+.scroll-feed {
+    display: none;
+}
+
+.paginator {
+    width: 16px;
+    height: 16px;
+    border-radius: 50% !important;
+}
+
+// Tablet
+@media screen and (min-width: 768px) and (max-width: 992px) { 
+    .feed-body-mobile {
+        width: 80%;
+    }
+
+    .card-mobile {
+        height: 450px;
+        width: 60%;
+
+        section {
+            img {
+                width: 80%;
+                height: 70%;
+            } 
+        }
+    }
+
+    .card-mobile-loading {
+        height: 450px;
+        width: 60%;
+    }
+}
+
+// Desktop
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .feed-body-mobile {
+        display: none;
+    }
+
+    .body-feed {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .card {
+        display: block;
+        background-color: #FBFBFB;
+        border-radius: 18px;
+        height: 470px;
+        width: 30%;
+        padding: 10px; 
+
+        img {
+            cursor: pointer;
+        }
+
+        p {
+            cursor: pointer;
+            &:hover {
+                color: #7d7d7d;
+            }
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h2 {
+                padding: 60px 0 0 0;
+                color: #1B3C4F;
+    
+                &:hover {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        section {
+            height: 90%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        
+            img {
+                border-radius: 18px;
+                width: 80%;
+                height: 60%;
+                margin: 5px 0;
+            }
+
+            p {
+                padding: 5px;
+                text-align: left;
+                width: 80%;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+
+            a {
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 0 100px 0;
+    
+                &:hover {
+                    color: #7d7d7d;
+                }
+            }
+        }
+
+        &.fade-in {
+            opacity: 0;
+            animation: fadeIn 0.3s ease-in forwards;
+        }
+    }
+
+    .card-loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #FBFBFB;
+        border-radius: 18px;
+        height: 470px;
+        width: 30%;
+        padding: 10px; 
+    }
+
+    .scroll-feed {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        div {
+            margin: 0 15px 0 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {    
+            background-color: #a70401;
+            color: #F5F5F5;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+            padding: 5px;
+        }
+    }
+}
+
+// Telas grandes
+@media screen and (min-width: 1200px) {
+    .feed-body-mobile {
+        display: none;
+    }
+
+    .body-feed {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .card {
+        display: block;
+        background-color: #FBFBFB;
+        border-radius: 18px;
+        height: 532px;
+        width: 30%;
+        padding: 10px; 
+
+        img {
+            cursor: pointer;
+        }
+
+        p {
+            cursor: pointer;
+            
+            &:hover {
+                color: #7d7d7d;
+            }
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h2 {
+                font-size: 20px;
+                padding: 75px 0 0 0;
+                color: #c7c7c7;
+    
+                &:hover {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        section {
+            height: 90%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        
+            img {
+                border-radius: 18px;
+                width: 85%;
+                height: 75%;
+                margin: 5px 0;
+            }
+
+            p {
+                padding: 5px;
+                text-align: left;
+                width: 80%;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+
+            a {
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 0 125px 0;
+    
+                &:hover {
+                    color: #7d7d7d;
+                }
+            }
+        }
+
+        &.fade-in {
+            opacity: 0;
+            animation: fadeIn 0.3s ease-in forwards;
+        }
+    }
+
+    .card-loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #FBFBFB;
+        border-radius: 18px;
+        height: 470px;
+        width: 30%;
+        padding: 10px; 
+    }
+
+    .scroll-feed {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        div {
+            margin: 0 15px 0 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {    
+            background-color: #a70401;
+            color: #F5F5F5;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+            padding: 5px;
+        }
+    }
+}

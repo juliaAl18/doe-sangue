@@ -1,0 +1,98 @@
+<div class="container-feed">
+  <div class="title-feed">
+    <h1>Notícias</h1>
+  </div>
+
+  <!-- Versão Mobile e para Tablet -->
+  <div class="feed-body-mobile">
+    <button mat-icon-button (click)="moverParaEsquerdaMobile()">
+      <mat-icon>
+        < </mat-icon>
+    </button>
+
+    <ng-container *ngIf="loaded; else loadingMobile">
+      <ng-container *ngIf="posts[indiceAtualMobile].fonte === 'noticias'; else noticiaMobile">
+        <div class="card-mobile shadow-lg" #cardMobile (click)="irParaPostagem(posts[indiceAtualMobile].url!)">
+          <div class="card-header">
+            <a [href]="posts[indiceAtualMobile].url" target="_blank">
+              <h1>Notícias</h1>
+            </a>
+            <a [href]="posts[indiceAtualMobile].url" target="_blank">
+              <img src="./assets/coracao.png" alt="Logo">
+            </a>
+          </div>
+          <section>
+            <p>{{ reduzirCaracteres(posts[indiceAtualMobile].texto) }}</p>
+          </section>
+
+        </div>
+      </ng-container>
+      <ng-template #noticiaMobile>
+        <div class="card-mobile shadow-lg" #cardMobile>
+          <div class="card-header">
+            <a [href]="posts[indiceAtualMobile].url" target="_blank">
+              <h1>Notícia!</h1>
+            </a>
+            <a [href]="posts[indiceAtualMobile].url" target="_blank">
+              <img src="./assets/coracao.png" alt="Logo ICTS">
+            </a>
+          </div>
+          <a [href]="posts[indiceAtualMobile].url" target="_blank">
+            <h2>{{ posts[indiceAtualMobile].fonte }}</h2>
+          </a>
+          <section>
+            <a [href]="posts[indiceAtualMobile].url" target="_blank">
+              <p>{{ posts[indiceAtualMobile].texto }}</p>
+            </a>
+          </section>
+        </div>
+      </ng-template>
+    </ng-container>
+
+    <ng-template #loadingMobile>
+      <div class="card-mobile-loading shadow-lg">
+
+      </div>
+    </ng-template>
+
+    <button mat-icon-button (click)="moverParaDireitaMobile()">
+      <mat-icon>></mat-icon>
+    </button>
+  </div>
+
+  <!-- Versão para os outros dispositivos -->
+  <div class="body-feed">
+    <ng-container *ngIf="loaded; else loadingDesktop">
+      <div *ngFor="let card of [posts[primeiroCard], posts[segundoCard], posts[terceiroCard]]" class="card shadow-lg"
+        (click)="irParaPostagem(card.url!)">
+        <div class="card-header">
+          <a [href]="card.url" target="_blank">
+            <h1>{{ 'Notícia!' }}</h1>
+          </a>
+          <a [href]="card.url" target="_blank">
+            <img [src]="'./assets/coracao.png'" alt="Logo">
+          </a>
+        </div>
+        <section>
+          <ng-container *ngIf="posts[indiceAtualMobile].urlImg != ''">
+            <p>{{ reduzirCaracteres(card.texto) }}</p>
+          </ng-container>
+          <ng-container *ngIf="card.urlImg === ''">
+            <p>{{ reduzirCaracteresDesktop(card.texto) }}</p>
+          </ng-container>
+        </section>
+      </div>
+    </ng-container>
+
+    <ng-template #loadingDesktop>
+      <div class="card-loading shadow-lg" *ngFor="let _ of [1, 2, 3]">
+      </div>
+    </ng-template>
+  </div>
+
+  <div class="scroll-feed">
+    <button mat-icon-button (click)="moverParaEsquerda()">
+      < </button>
+        <button mat-icon-button (click)="moverParaDireita()"> > </button>
+  </div>
+</div>
